@@ -64,6 +64,15 @@
         transition: opacity 0.2s ease-in-out; /* Quick fade for press */
       }
 
+      #overlay-power-depress {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2; /* Above pc-off, below reset-depress */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.2s ease-in-out; /* Smooth fade */
+    }
+
       button {
           position: absolute;
           background: none;
