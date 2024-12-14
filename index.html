@@ -4,6 +4,9 @@
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
+		<!-- Perfect DOS VGA 437 font -->
+		<link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+                
 
 		<title>Title in the tab</title>
 
@@ -12,16 +15,24 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<div class="pc-container">
+			<!-- this is a static image that as the state changes, it is covered up by the "overlay-state" -->
+			<img id="pc-off" src="img/power-off.png" alt="90s PC">
 
-		<h1>h1</h1>
-		<input type="text" name="" value="">
-		<button type="button" name="button">Are we </button>
+			<!-- as the buttons are pressed, the overlay state image should change by fading in -->
+			<img id="overlay-state" src="" alt="Overlay Image">
+			<img id="overlay-reset-depress" src="img/power-reset-depress.png" alt="Reset Depress Image">
+			<button id="power-button"></button>
+			<button id="reset-button"></button>
+			<button id="turbo-button"></button>
+			<button id="key-switch"></button>
+			<div class="lcd-screen" id="lcd-screen">123</div>
+		</div>
+		
+		
+		
+		
 
-		<h2>h2</h2>
-		<img src="" alt="">
-		<h3>h3</h3>
-
-		<!-- include an api that finds the image of your make and model and use localstorage to save the user's preferences for return visits. -->
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

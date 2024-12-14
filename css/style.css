@@ -1,21 +1,119 @@
-/******************************************
-/* CSS
-/*******************************************/
+        /******************************************
+        /* CSS
+        /*******************************************/
 
-/* Box Model Hack */
-*{
-  box-sizing: border-box;
-}
+        /* Box Model Hack */
+        * {
+          box-sizing: border-box;
+      }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-img{
-  display: block;
-  margin: 0 auto;
-}
+      /******************************************
+      /* LAYOUT
+      /*******************************************/
+      img {
+          display: block;
+          margin: 0 auto;
+      }
 
+      html {
+          background-color: black;
+          /* font-family: "Perfect DOS VGA 437"; */
+      }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+      body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black;
+      }
+
+      .pc-container {
+          position: relative;
+          width: 90vw; /* Make it responsive but stretch to fit viewport */
+          height: calc(90vw * 1054 / 2046); /* Maintain the correct aspect ratio */
+          max-width: 2046px; /* Ensure it doesn’t exceed original size */
+          max-height: 1054px;
+          overflow: hidden;
+      }
+
+      #pc-off {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1; /* Base layer */
+      }
+
+      #overlay-state {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transition: opacity 1s ease-in-out; /* Fade transition */
+          z-index: 2; /*Overlay layer */
+          opacity: 0; /*Initially hidden*/
+      }
+
+      #overlay-reset-depress {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3; /* Above other overlays */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.2s ease-in-out; /* Quick fade for press */
+      }
+
+      button {
+          position: absolute;
+          background: none;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          /* border: 1px solid white; */
+          z-index: 3;
+      }
+
+      #power-button {
+          top: 6%; /* Adjust to position the button accurately */
+          left: 76.5%; /* Adjust as needed */
+          width: 8%; /* Scale proportionally */
+          height: 22%;
+          /* border: 1px solid white; */
+      }
+
+      #reset-button {
+          top: 46%; /* Adjust for reset button location */
+          left: 57.5%; /* Adjust as needed */
+          width: 8%;
+          height: 21%;
+          /* border: 1px solid white; */
+      }
+
+      #turbo-button {
+          top: 46%; /* Adjust for turbo button location */
+          left: 68%; /* Adjust as needed */
+          width: 8%;
+          height: 21%;
+      }
+
+      #key-switch {
+          top: 53%; /* Adjust for key location */
+          left: 81.5%; /* Adjust as needed */
+          width: 12%;
+          height: 13.5%;
+      }
+
+      button:active {
+          transform: scale(0.9); /* Simulates button press */
+      }
+
+      .lcd-screen {
+          position: absolute;
+          top: 20%; /* Adjust to fit inside the LCD */
+          left: 38%;
+          font-size: calc(3vw); /* Scales font size proportionally */
+          color: limegreen;
+          font-family: 'Courier New', monospace;
+          display: none; /* Initially hidden */
+      }
