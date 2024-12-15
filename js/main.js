@@ -83,7 +83,6 @@ document.getElementById("power-button").addEventListener("mouseup", () => {
         powerAudio.play(); //play power-on audio
         mainAudio.play();
         setLCDState("green"); // Short press toggles to green
-        // powerState = "green"; // Update power state
         startFloppyLedBlinking();
         powerIsOn = true;
     }
@@ -106,7 +105,6 @@ document.getElementById("reset-button").addEventListener("mouseup", () => {
             setTimeout(() => {
                 setLCDState("green"); // Then turn it back on like an initial power button press
                 startFloppyLedBlinking();
-                // powerState ="green"
             }, 500); // Small delay to simulate a power cycle
         }
 });
@@ -134,6 +132,6 @@ document.getElementById("turbo-button").addEventListener("mouseup", () => {
             isTurboOn = false;
         // setLCDState("turbo"); // Turn on turbo
         
-        
+
     }
     });
