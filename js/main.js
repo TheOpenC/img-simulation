@@ -134,5 +134,6 @@ document.getElementById("turbo-button").addEventListener("mouseup", () => {
             isTurboOn = false;
         // setLCDState("turbo"); // Turn on turbo
         
+        
     }
     });
