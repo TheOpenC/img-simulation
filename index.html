@@ -16,10 +16,7 @@
 	</head>
 	<body>
 		<div class="pc-container">
-			<!-- this is a static image that as the state changes, it is covered up by the "overlay-state" -->
 			<img id="pc-off" src="img/power-off.png" alt="90s PC">
-
-			<!-- as the buttons are pressed, the overlay state image should change by fading in -->
 			<img id="overlay-state" src="" alt="Overlay Image">
 			<img id="overlay-reset-depress" src="img/power-reset-press.png" alt="Reset Depress Image">
 			<img id="overlay-power-depress" src="img/power-pressed.png" alt="Power Depress Image">
@@ -27,13 +24,14 @@
 			<button id="power-button"></button>
 			<button id="reset-button"></button>
 			<button id="turbo-button"></button>
-			<button id="key-switch"></button>
+
 			<div class="lcd-screen" id="lcd-screen">123</div>
 		</div>
 
 		<audio id="power-audio" src="mp3/power-pressed.mp3"></audio>
 		<audio id="power-main" src="mp3/power-main.mp3"></audio>
 		<audio id="loop-audio" src="mp3/computer-loop.mp3" loop></audio>
+		
 		
 		
 

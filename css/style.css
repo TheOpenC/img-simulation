@@ -59,7 +59,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 3; /* Above other overlays */
+        z-index: 4; /* Above other overlays */
         opacity: 0; /* Initially hidden */
         transition: opacity 0.2s ease-in-out; /* Quick fade for press */
       }
@@ -80,7 +80,7 @@
           cursor: pointer;
           outline: none;
           /* border: 1px solid white; */
-          z-index: 3;
+          z-index: 5;
       }
 
       #power-button {
@@ -106,12 +106,12 @@
           height: 21%;
       }
 
-      #key-switch {
+      /* #key-switch {
           top: 53%; /* Adjust for key location */
-          left: 81.5%; /* Adjust as needed */
-          width: 12%;
-          height: 13.5%;
-      }
+          /* left: 81.5%; Adjust as needed */
+          /* width: 12%; */
+          /* height: 13.5%; */ 
+      /* } */
 
       button:active {
           transform: scale(0.9); /* Simulates button press */
@@ -129,11 +129,11 @@
 
       #floppy-led {
         position: absolute;
-        top: 42%;
-        left: 52%;
-        width: 3%;
+        top: 22.625%;
+        left: 18%;
+        width: 5.99%;
         height: auto;
-        z-index: 3;
+        z-index: 6;
         opacity: 0;
-        transition: opacity .1s ease-in-out;
+        transition: opacity .25s ease-in-out;
       }
