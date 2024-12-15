@@ -46,32 +46,66 @@
           z-index: 1; /* Base layer */
       }
 
-      #overlay-state {
+      #overlay-state, 
+      #overlay-reset-depress,
+      #overlay-power-depress,
+      #overlay-turbo-depress {
           position: absolute;
           width: 100%;
           height: 100%;
-          transition: opacity 1s ease-in-out; /* Fade transition */
           z-index: 2; /*Overlay layer */
-          opacity: 0; /*Initially hidden*/
-      }
+          opacity: 0; /*Initially hidden */
+          transition: opacity .2s ease-in-out; /* Fade transition */
+       }
 
-      #overlay-reset-depress {
+       #overlay-turbo-state {
+        position: absolute;
+        top: 54.55%;
+        left: 13.9%;
+        width: 2.55%;
+        height: auto;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+       }
+
+       #floppy-led {
+        position: absolute;
+        top: 22.625%;
+        left: 18%;
+        width: 5.99%;
+        height: auto;
+        z-index: 6;
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+      }
+      
+      /* #overlay-turbo-depress{
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 4; /* Above other overlays */
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.2s ease-in-out; /* Quick fade for press */
-      }
+        z-index: 3;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+      } */
 
+      /* #overlay-reset-depress {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 4; 
+        opacity: 0; 
+        transition: opacity 0.2s ease-in-out; 
+      } */
+/* 
       #overlay-power-depress {
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 2; /* Above pc-off, below reset-depress */
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.2s ease-in-out; /* Smooth fade */
-    }
+        z-index: 2; 
+        opacity: 0; 
+        transition: opacity 0.2s ease-in-out; 
+    } */
 
       button {
           position: absolute;
@@ -105,6 +139,7 @@
           width: 8%;
           height: 21%;
       }
+      
 
       /* #key-switch {
           top: 53%; /* Adjust for key location */
@@ -127,13 +162,4 @@
           display: none; /* Initially hidden */
       }
 
-      #floppy-led {
-        position: absolute;
-        top: 22.625%;
-        left: 18%;
-        width: 5.99%;
-        height: auto;
-        z-index: 6;
-        opacity: 0;
-        transition: opacity .25s ease-in-out;
-      }
+      
