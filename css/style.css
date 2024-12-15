@@ -126,3 +126,14 @@
           font-family: 'Courier New', monospace;
           display: none; /* Initially hidden */
       }
+
+      #floppy-led {
+        position: absolute;
+        top: 42%;
+        left: 52%;
+        width: 3%;
+        height: auto;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+      }

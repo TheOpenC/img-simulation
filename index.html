@@ -21,16 +21,19 @@
 
 			<!-- as the buttons are pressed, the overlay state image should change by fading in -->
 			<img id="overlay-state" src="" alt="Overlay Image">
-			<img id="overlay-reset-depress" src="img/power-reset-depress.png" alt="Reset Depress Image">
+			<img id="overlay-reset-depress" src="img/power-reset-press.png" alt="Reset Depress Image">
 			<img id="overlay-power-depress" src="img/power-pressed.png" alt="Power Depress Image">
+			<img id = "floppy-led" src = "img/blink.png" alt="Floppy LED">
 			<button id="power-button"></button>
 			<button id="reset-button"></button>
 			<button id="turbo-button"></button>
 			<button id="key-switch"></button>
 			<div class="lcd-screen" id="lcd-screen">123</div>
 		</div>
-		
-		
+
+		<audio id="power-audio" src="mp3/power-pressed.mp3"></audio>
+		<audio id="power-main" src="mp3/power-main.mp3"></audio>
+		<audio id="loop-audio" src="mp3/computer-loop.mp3" loop></audio>
 		
 		
 
