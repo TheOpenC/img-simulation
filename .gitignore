@@ -1,0 +1,10 @@
+.DS_Store
+SoulseekQt/
+.bash*
+.config/
+.cache/
+Code-Practice/
+Codewars/
+nyc-parking-tool/
+retro-90s/
+scrape-instagram/
